@@ -1,5 +1,7 @@
 function minDate(dates) {
-  //write you code here
+  dates=dates.map(d=>new Date(d))
+	let minDate =new Date(Math.min(...dates));
+	return `${minDate.getFullYear()}/${String(minDate.getMonth() + 1).padStart(2, '0')}/${String(minDate.getDate()).padStart(2, '0')}`
 }
 
 // Do not change the code
